@@ -1,0 +1,276 @@
+/* Global Styles */
+body {
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    background-color: #eaeaea;
+    background-color: #27323a;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #29a19c;
+    margin-top: 0px;
+    height: 75px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    margin-right: 40px; /* Garde le logo à gauche */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1; /* Prend tout l'espace disponible pour les liens */
+    margin-left: 20px; /* Ajoute un peu d'espace entre le logo et les liens */
+    margin-right: 100px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 20px; /* Ajoute de l'espace entre chaque lien */
+  
+}
+
+nav a:hover {
+    color: #a3f7bf; /* Ajoute un effet de survol pour plus d'interactivité */
+}
+
+
+.banniere {
+    position: relative; /* Permet de positionner des éléments enfants avec position absolute */
+    /* display: inline-block; Garde la taille de l'image */
+}
+
+.ban1 {
+    width: 100%; /* Adapte l'image à la taille du conteneur */
+    height: auto; /* Garde les proportions de l'image */
+}
+
+.ban-button {
+    position: absolute; /* Positionne le bouton sur l'image */
+    top: 50%; /* Place le bouton au milieu verticalement */
+    left: 50%; /* Place le bouton au milieu horizontalement */
+    transform: translate(-400%, 500%); /* Centre précisément le bouton */
+    background-color: #29a19c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+.ban-button:hover {
+    background-color: #a3f7bf;
+}
+
+.ban-button1 {
+    position: absolute; /* Positionne le bouton sur l'image */
+    top: 50%; /* Place le bouton au milieu verticalement */
+    left: 50%; /* Place le bouton au milieu horizontalement */
+    transform: translate(-200%, 500%); /* Centre précisément le bouton */
+    background-color: #29a19c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.ban-button1:hover {
+    background-color: #a3f7bf;
+}
+
+.ban1{
+    padding-top: 20px;
+    width: 100%;
+    padding: auto;
+    margin: auto;
+}
+
+/* Qui suis-je */
+.qui-suis-je {
+    background-color: #2e3b42; /* Fond sombre */
+    color: white; /* Couleur du texte */
+    padding: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.qui-suis-je .content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-pic {
+    width: 50%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text {
+    flex: 1;
+    /* max-width: 600px; */
+}
+
+.text h1 {
+    font-size: 28px;
+    color: #a3f7bf; /* Couleur dorée pour le titre */
+    margin-bottom: 20px;
+}
+
+.text p {
+    font-size: 23px;
+    line-height: 1.6;
+}
+
+/* Avant/Après */
+.avant-apres {
+    /* background-color: #333; */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.avantApres{
+    color: #a3f7bf
+}
+
+.avant-apres .images {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.image img {
+    width: 200px;
+    border-radius: 10px;
+    height: 350px;
+}
+
+.image p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Level-up essentials  */
+
+.level-up-essentials {
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    padding: 5px 20px;
+}
+
+.level-up-essentials h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.level-up-essentials h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.offers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .offers {
+        grid-template-columns: 1fr; /* Une colonne sur les petits écrans */
+    }
+}
+
+.offer {
+    background-color: #29a19c;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid #a3f7bf; /* Green border */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.offer h3 {
+    color: #a3f7bf;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.offer p {
+    font-size: 18px;
+    line-height: 1.1;
+    text-align: left;
+    color: #eaeaea;
+}
+
+.cta {
+    display: inline-block;
+    background-color: #29a19c;
+    color: white;
+    padding: 15px 30px; /* Ajuste la taille intérieure */
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    text-align: center; /* Centre le texte horizontalement */
+    line-height: 1.5; /* Ajuste la hauteur de ligne pour centrer verticalement */
+    border: none; /* Supprime les bordures par défaut */
+    cursor: pointer; /* Change le curseur pour un effet cliquable */
+}
+
+.cta:hover {
+    background-color: #a3f7bf;
+}
+
+.level-up-essentials a {
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.level-up-essentials a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #29a19c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
