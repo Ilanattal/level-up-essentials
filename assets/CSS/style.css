@@ -224,13 +224,12 @@ footer {
 
 .offers {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes sur les écrans plus grands */
     gap: 20px;
-    justify-content: center;
-    align-items: stretch;
+    justify-items: center; /* Centre les éléments dans chaque cellule de la grille */
     margin-bottom: 40px;
     width: 100%;
-    
+    padding: 0 20px; /* Ajoute un peu d'espace autour des offres */
 }
 
 .offer {
@@ -241,12 +240,17 @@ footer {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     border: 1px solid #a3f7bf; /* Bordure verte */
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: space-between;
     width: 100%; /* Assure que chaque offre occupe toute la largeur du conteneur */
-    max-width: 600px; /* Limite la largeur des offres */
+    max-width: 500px; /* Limite la largeur des offres pour éviter le chevauchement */
+    box-sizing: border-box; /* Permet de gérer le padding sans causer de débordement */
 }
 
+.img1{
+    width: 100px;
+}
 
 .offer h3 {
     color: #a3f7bf;
@@ -259,7 +263,6 @@ footer {
     line-height: 1.1;
     text-align: center;
     color: #eaeaea;
-
 }
 
 .cta {
