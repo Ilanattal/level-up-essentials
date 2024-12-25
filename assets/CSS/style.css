@@ -1,82 +1,71 @@
+/* Polices */
+@font-face {
+    font-family: 'Agrandir';
+    src: url('Fonts/Agrandir-Regular.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('Fonts/Poppins-ExtraBoldItalic.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Global Styles */
 body {
     margin: 0px;
     font-family: Arial, sans-serif;
     background-color: #eaeaea;
     background-color: #27323a;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
 }
 
+/* Navbar */
 header.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #29a19c;
-    margin-top: 0px;
     height: 75px;
+    padding: 0 20px;
 }
 
 .logo {
     width: 120px;
     height: auto;
-    margin-right: 40px; /* Garde le logo à gauche */
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    flex-grow: 1; /* Prend tout l'espace disponible pour les liens */
-    margin-left: 20px; /* Ajoute un peu d'espace entre le logo et les liens */
-    margin-right: 100px;
+    flex-grow: 1;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-size: 16px;
-    margin: 0 20px; /* Ajoute de l'espace entre chaque lien */
-  
+    margin: 0 20px;
 }
 
 nav a:hover {
-    color: #a3f7bf; /* Ajoute un effet de survol pour plus d'interactivité */
+    color: #a3f7bf;
 }
 
-
+/* Banniere */
 .banniere {
-    position: relative; /* Permet de positionner des éléments enfants avec position absolute */
-    /* display: inline-block; Garde la taille de l'image */
+    position: relative;
 }
 
 .ban1 {
-    width: 100%; /* Adapte l'image à la taille du conteneur */
-    height: auto; /* Garde les proportions de l'image */
-}
-
-.ban-button {
-    position: absolute; /* Positionne le bouton sur l'image */
-    top: 50%; /* Place le bouton au milieu verticalement */
-    left: 50%; /* Place le bouton au milieu horizontalement */
-    transform: translate(-400%, 500%); /* Centre précisément le bouton */
-    background-color: #29a19c;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease;
-}
-.ban-button:hover {
-    background-color: #a3f7bf;
+    width: 100%;
+    height: auto;
 }
 
 .ban-button1 {
-    position: absolute; /* Positionne le bouton sur l'image */
-    top: 50%; /* Place le bouton au milieu verticalement */
-    left: 50%; /* Place le bouton au milieu horizontalement */
-    transform: translate(-200%, 500%); /* Centre précisément le bouton */
+    position: absolute;
     background-color: #29a19c;
     color: white;
     padding: 10px 20px;
@@ -86,24 +75,32 @@ nav a:hover {
     font-size: 16px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease;
+    top: 440px;
+    left: 60px;
+    /* transform: translate(-400%, 500%); */
 }
 
-.ban-button1:hover {
+.ban-button:hover, .ban-button1:hover {
     background-color: #a3f7bf;
 }
 
-.ban1{
-    padding-top: 20px;
-    width: 100%;
-    padding: auto;
-    margin: auto;
-}
+/* .ban-button {
+    top: 50%;
+    left: 50%;
+    transform: translate(-400%, 500%);
+} */
+
+/* .ban-button1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-200%, 500%);
+} */
 
 /* Qui suis-je */
 .qui-suis-je {
-    background-color: #2e3b42; /* Fond sombre */
-    color: white; /* Couleur du texte */
-    padding: 40px;
+    background-color: #2e3b42;
+    color: white;
+    padding: 100px;
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -128,12 +125,11 @@ nav a:hover {
 
 .text {
     flex: 1;
-    /* max-width: 600px; */
 }
 
 .text h1 {
     font-size: 28px;
-    color: #a3f7bf; /* Couleur dorée pour le titre */
+    color: #a3f7bf;
     margin-bottom: 20px;
 }
 
@@ -144,15 +140,10 @@ nav a:hover {
 
 /* Avant/Après */
 .avant-apres {
-    /* background-color: #333; */
     color: white;
     padding: 20px;
     text-align: center;
     margin-bottom: 30px;
-}
-
-.avantApres{
-    color: #a3f7bf
 }
 
 .avant-apres .images {
@@ -172,13 +163,51 @@ nav a:hover {
     font-size: 16px;
 }
 
+/* Level-up essentials */
+.level-up-essentials {
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    padding: 5px 100px;
+}
+
+.level-up-essentials h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.level-up-essentials h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.kitchens {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 40px;
+}
+/*  */
+
+/* Footer */
+footer {
+    background-color: #29a19c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
 /* Level-up essentials  */
 
 .level-up-essentials {
     text-align: center;
     background-color: #000000;
     color: white;
-    padding: 5px 20px;
+    padding: 5px 100px;
 }
 
 .level-up-essentials h1 {
@@ -200,12 +229,8 @@ nav a:hover {
     justify-content: center;
     align-items: stretch;
     margin-bottom: 40px;
-}
-
-@media (max-width: 768px) {
-    .offers {
-        grid-template-columns: 1fr; /* Une colonne sur les petits écrans */
-    }
+    width: 100%;
+    
 }
 
 .offer {
@@ -214,11 +239,14 @@ nav a:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    border: 1px solid #a3f7bf; /* Green border */
+    border: 1px solid #a3f7bf; /* Bordure verte */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%; /* Assure que chaque offre occupe toute la largeur du conteneur */
+    max-width: 600px; /* Limite la largeur des offres */
 }
+
 
 .offer h3 {
     color: #a3f7bf;
@@ -229,8 +257,9 @@ nav a:hover {
 .offer p {
     font-size: 18px;
     line-height: 1.1;
-    text-align: left;
+    text-align: center;
     color: #eaeaea;
+
 }
 
 .cta {
@@ -274,3 +303,283 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+@media (max-width: 1000px) {
+  /* Global Styles */
+body {
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    background-color: #eaeaea;
+    background-color: #27323a;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar */
+header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #29a19c;
+    height: 75px;
+    padding: 0 15px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #a3f7bf;
+}
+
+/* Banniere */
+.banniere {
+    position: relative;
+    padding-top: 20px;
+}
+
+.ban1 {
+    width: 100%;
+    height: auto;
+}
+.ban-button{
+    display: none;
+}
+/* .ban-button1 {
+    background-color: #29a19c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease; */
+    /* display: block; 
+    margin: 0 auto; 
+    margin-top: 10px;
+} */ 
+.ban-button1 {
+    /* position: absolute; */
+    background-color: #29a19c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    /* top: 440px;
+    left: 60px; */
+} 
+
+.ban-button:hover, .ban-button1:hover {
+    background-color: #a3f7bf;
+}
+/* 
+.ban-button {
+    top: 50%;
+    left: 50%;
+    transform: translate(-300%, 400%);
+}
+
+.ban-button1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-200%, 400%);
+} */
+
+/* Qui suis-je */
+.qui-suis-je {
+    background-color: #2e3b42;
+    color: white;
+    padding: 60px 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.qui-suis-je .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text {
+    flex: 1;
+    text-align: center;
+}
+
+.text h1 {
+    font-size: 24px;
+    color: #a3f7bf;
+    margin-bottom: 20px;
+}
+
+.text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Avant/Après */
+.avant-apres {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.avant-apres .images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.image img {
+    width: 150px;
+    border-radius: 10px;
+    height: 250px;
+}
+
+.image p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Level-up essentials */
+.level-up-essentials {
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    padding: 5px 20px;
+}
+
+.level-up-essentials h1 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.level-up-essentials h2 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.kitchens {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.kitchen {
+    background-color: #29a19c;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid #a3f7bf;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.kitchen h3 {
+    color: #a3f7bf;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.kitchen p {
+    font-size: 16px;
+    line-height: 1.1;
+    text-align: left;
+    color: #eaeaea;
+}
+
+.cta {
+    display: inline-block;
+    background-color: #29a19c;
+    color: white;
+    padding: 12px 25px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cta:hover {
+    background-color: #a3f7bf;
+}
+
+.level-up-essentials a {
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.level-up-essentials a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+
+.offers {
+    grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+}
+
+.offer {
+    width: 100%; /* Les offres prennent toute la largeur disponible sur mobile */
+    padding: 0px;
+}
+
+.offer h3 {
+    font-size: 16px; /* Réduit la taille du titre pour les petits écrans */
+}
+
+.offer p {
+    font-size: 14px; /* Réduit la taille du texte pour les petits écrans */
+}
+
+/* Footer */
+footer {
+    background-color: #29a19c;
+    color: white;
+    text-align: center;
+}
+}
+

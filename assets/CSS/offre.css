@@ -104,7 +104,7 @@ nav a:hover {
     text-align: center;
     /* background-color: #000000; */
     color: white;
-    padding: 5px 20px;
+    padding: 5px 100px;
 }
 
 .level-up-essentials h1 {
@@ -126,12 +126,6 @@ nav a:hover {
     justify-content: center;
     align-items: stretch;
     margin-bottom: 40px;
-}
-
-@media (max-width: 768px) {
-    .offers {
-        grid-template-columns: 1fr; /* Une colonne sur les petits écrans */
-    }
 }
 
 .offer {
@@ -250,19 +244,243 @@ nav a:hover {
 }
 
 /* Responsive: empile les éléments sur les petits écrans */
+@media (max-width: 1000px) {
+   /* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eaeaea;
+    background-color: #27323a;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar */
+header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #29a19c;
+    height: 75px;
+    padding: 0 15px;
+}
+
+.logo {
+    width: 80px; /* Réduit la taille du logo pour les petits écrans */
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Réduit la taille de la police des liens */
+    margin: 0 10px;
+}
+
+nav a:hover {
+    color: #a3f7bf;
+}
+
+/* Banniere */
+.banniere {
+    position: relative;
+}
+
+.ban1 {
+    width: 100%;
+    height: auto;
+}
+
+.ban-button, .ban-button1 {
+    position: absolute;
+    background-color: #29a19c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Réduit la taille de la police */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.ban-button:hover, .ban-button1:hover {
+    background-color: #a3f7bf;
+}
+
+/* Qui suis-je */
+.qui-suis-je {
+    background-color: #2e3b42;
+    color: white;
+    padding: 60px 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1000px; /* Limite la taille du conteneur sur mobile */
+}
+
+.qui-suis-je .content {
+    display: flex;
+    flex-direction: column; /* Affiche les éléments verticalement */
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-pic {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text {
+    text-align: center;
+}
+
+.text h1 {
+    font-size: 24px;
+    color: #a3f7bf;
+    margin-bottom: 20px;
+}
+
+.text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Avant/Après */
+.avant-apres {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.avant-apres .images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permet à l'image de se déplacer sur une nouvelle ligne si nécessaire */
+}
+
+.image img {
+    width: 150px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.image p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Level-up essentials */
+.level-up-essentials {
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    padding: 5px 20px;
+}
+
+.level-up-essentials h1 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.level-up-essentials h2 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.kitchens {
+    display: grid;
+    grid-template-columns: 1fr; /* Affiche une seule colonne pour les petits écrans */
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.kitchen {
+    background-color: #29a19c;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid #a3f7bf;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.kitchen h3 {
+    color: #a3f7bf;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.kitchen p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    color: #eaeaea;
+}
+
+.cta {
+    display: inline-block;
+    background-color: #29a19c;
+    color: white;
+    padding: 12px 25px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cta:hover {
+    background-color: #a3f7bf;
+}
+
+.level-up-essentials a {
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.level-up-essentials a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #29a19c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+}
+
 @media (max-width: 768px) {
-    .kitchen {
-        flex-direction: column; /* Empile image et texte */
-        align-items: center;
-        text-align: center;
-    }
-
-    .kitchen img.img1 {
-        width: 80px; /* Taille plus petite pour les petits écrans */
-        margin-bottom: 10px;
-    }
-
-    .kitchen-content {
-        text-align: center;
+    .offers {
+        grid-template-columns: 1fr; /* Une colonne sur les petits écrans */
     }
 }
