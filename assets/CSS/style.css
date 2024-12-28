@@ -166,7 +166,7 @@ nav a:hover {
 /* Level-up essentials */
 .level-up-essentials {
     text-align: center;
-    background-color: #000000;
+    background-color: #2e3b42;
     color: white;
     padding: 5px 100px;
 }
@@ -205,7 +205,7 @@ footer {
 
 .level-up-essentials {
     text-align: center;
-    background-color: #000000;
+    background-color: #2e3b42;
     color: white;
     padding: 5px 100px;
 }
@@ -229,7 +229,7 @@ footer {
     justify-items: center; /* Centre les éléments dans chaque cellule de la grille */
     margin-bottom: 40px;
     width: 100%;
-    padding: 0 20px; /* Ajoute un peu d'espace autour des offres */
+    padding: 0px 20px; /* Ajoute un peu d'espace autour des offres */
 }
 
 .offer {
@@ -258,7 +258,8 @@ footer {
     margin-bottom: 10px;
 }
 
-.offer p {
+.offer p { 
+    padding: 20px;
     font-size: 18px;
     line-height: 1.1;
     text-align: center;
@@ -309,6 +310,12 @@ footer {
 
 @media (max-width: 1000px) {
   /* Global Styles */
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     margin: 0px;
     font-family: Arial, sans-serif;
@@ -478,7 +485,7 @@ nav a:hover {
 /* Level-up essentials */
 .level-up-essentials {
     text-align: center;
-    background-color: #000000;
+    background-color: #2e3b42;
     color: white;
     padding: 5px 20px;
 }

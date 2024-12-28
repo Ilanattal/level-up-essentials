@@ -25,8 +25,8 @@ nav {
     display: flex;
     justify-content: space-between;
     flex-grow: 1; /* Prend tout l'espace disponible pour les liens */
-    margin-left: 20px; /* Ajoute un peu d'espace entre le logo et les liens */
-    margin-right: 100px;
+    /* margin-left: 20px; Ajoute un peu d'espace entre le logo et les liens */
+    /* margin-right: 100px; */
 }
 
 nav a {
@@ -138,6 +138,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .offer h3 {
@@ -243,6 +244,14 @@ nav a:hover {
     color: #eaeaea;
 }
 
+footer {
+    background-color: #29a19c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}  
+
+
 /* Responsive: empile les éléments sur les petits écrans */
 @media (max-width: 1000px) {
    /* Global Styles */
@@ -258,16 +267,17 @@ body {
 /* Navbar */
 header.navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     background-color: #29a19c;
     height: 75px;
-    padding: 0 15px;
+    padding: 0 0px;
 }
 
 .logo {
     width: 80px; /* Réduit la taille du logo pour les petits écrans */
     height: auto;
+    
 }
 
 nav {
@@ -388,7 +398,7 @@ nav a:hover {
 /* Level-up essentials */
 .level-up-essentials {
     text-align: center;
-    background-color: #000000;
+    background-color: #27323a;
     color: white;
     padding: 5px 20px;
 }
