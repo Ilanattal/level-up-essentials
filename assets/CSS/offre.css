@@ -1,24 +1,23 @@
 body {
     margin: 0px;
     font-family: Arial, sans-serif;
-    background-color: #eaeaea;
     background-color: #27323a;
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 header.navbar {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: #29a19c;
     margin-top: 0px;
-    height: 75px;
 }
 
 .logo {
     width: 120px;
     height: auto;
-    margin-right: 40px; /* Garde le logo à gauche */
+    margin-right: 0px; /* Garde le logo à gauche */
 }
 
 nav {
@@ -42,10 +41,11 @@ nav a:hover {
 }
 
 
-
+/* banniere  */
 .banniere {
     position: relative; /* Permet de positionner des éléments enfants avec position absolute */
     /* display: inline-block; Garde la taille de l'image */
+    
 }
 
 .ban1 {
@@ -53,54 +53,17 @@ nav a:hover {
     height: auto; /* Garde les proportions de l'image */
 }
 
-.ban-button {
-    position: absolute; /* Positionne le bouton sur l'image */
-    top: 50%; /* Place le bouton au milieu verticalement */
-    left: 50%; /* Place le bouton au milieu horizontalement */
-    transform: translate(-400%, 500%); /* Centre précisément le bouton */
-    background-color: #29a19c;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease;
-}
-.ban-button:hover {
-    background-color: #a3f7bf;
-}
-
-.ban-button1 {
-    position: absolute; /* Positionne le bouton sur l'image */
-    top: 50%; /* Place le bouton au milieu verticalement */
-    left: 50%; /* Place le bouton au milieu horizontalement */
-    transform: translate(-200%, 500%); /* Centre précisément le bouton */
-    background-color: #29a19c;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease;
-}
-
-.ban-button1:hover {
-    background-color: #a3f7bf;
-}
-
 .ban1{
     padding-top: 20px;
     width: 100%;
     padding: auto;
     margin: auto;
+    background-color: #27323a;
 }
 
 
 .level-up-essentials {
+    background-color: #27323a;
     text-align: center;
     /* background-color: #000000; */
     color: white;
@@ -111,6 +74,7 @@ nav a:hover {
     font-size: 36px;
     color: #ffffff;
     margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 .level-up-essentials h2 {
@@ -121,11 +85,12 @@ nav a:hover {
 
 .offers {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes sur les écrans plus grands */
     gap: 20px;
-    justify-content: center;
-    align-items: stretch;
+    justify-items: center; /* Centre les éléments dans chaque cellule de la grille */
     margin-bottom: 40px;
+    width: 100%;
+    padding: 0px 20px; /* Ajoute un peu d'espace autour des offres */
 }
 
 .offer {
@@ -134,11 +99,14 @@ nav a:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    border: 1px solid #a3f7bf; /* Green border */
+    border: 1px solid #a3f7bf; /* Bordure verte */
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    width: 100%; /* Assure que chaque offre occupe toute la largeur du conteneur */
+    max-width: 500px; /* Limite la largeur des offres pour éviter le chevauchement */
+    box-sizing: border-box; /* Permet de gérer le padding sans causer de débordement */
 }
 
 .offer h3 {
@@ -147,10 +115,11 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
-.offer p {
+.offer p { 
+    padding: 20px;
     font-size: 18px;
     line-height: 1.1;
-    text-align: left;
+    text-align: center;
     color: #eaeaea;
 }
 
@@ -242,23 +211,54 @@ nav a:hover {
     font-size: 18px;
     line-height: 1.5;
     color: #eaeaea;
+
+}
+
+/* footer  */
+
+/* toggles */
+.social-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espace entre les icônes */
+    margin-top: 0px; /* Espace au-dessus du footer */
+}
+
+.social-icon i {
+    font-size: 40px; /* Taille des icônes */
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover i {
+    color: #a3f7bf; /* Change la couleur des icônes au survol */
 }
 
 footer {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
     background-color: #29a19c;
     color: white;
     text-align: center;
     padding: 10px;
 }  
 
+footer p{
+
+    /* margin-left: 20px ; */
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* Responsive: empile les éléments sur les petits écrans */
 @media (max-width: 1000px) {
    /* Global Styles */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #eaeaea;
     background-color: #27323a;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.6;
@@ -267,7 +267,7 @@ body {
 /* Navbar */
 header.navbar {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     background-color: #29a19c;
     height: 75px;
@@ -275,22 +275,24 @@ header.navbar {
 }
 
 .logo {
-    width: 80px; /* Réduit la taille du logo pour les petits écrans */
+    width: 80px;
     height: auto;
-    
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
+    justify-content: space-evenly; /* Répartit uniformément les éléments */
+    align-items: center; /* Centre verticalement */
+    flex-grow: 1; /* Permet à l'élément nav de prendre toute la largeur disponible */
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 14px; /* Réduit la taille de la police des liens */
-    margin: 0 10px;
+    font-size: 14px;
+    margin: 0 15px; /* Ajoute un espacement fixe entre les liens */
+    text-align: center; /* Centre le texte dans chaque lien */
+    display: block; /* Garantit que les liens prennent toute la largeur disponible pour aligner le texte */
 }
 
 nav a:hover {
@@ -438,13 +440,14 @@ nav a:hover {
 .kitchen h3 {
     color: #a3f7bf;
     font-size: 18px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .kitchen p {
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: left;
+    /* padding: 20px; */
+    font-size: 18px;
+    line-height: 1.1;
+    text-align: center;
     color: #eaeaea;
 }
 
@@ -488,6 +491,47 @@ footer {
     padding: 10px;
 }
 }
+.offers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes sur les écrans plus grands */
+    gap: 20px;
+    justify-items: center; /* Centre les éléments dans chaque cellule de la grille */
+    margin-bottom: 40px;
+    width: 100%;
+    padding: 0px 20px; /* Ajoute un peu d'espace autour des offres */
+}
+
+.offer {
+    background-color: #29a19c;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid #a3f7bf; /* Bordure verte */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Assure que chaque offre occupe toute la largeur du conteneur */
+    max-width: 500px; /* Limite la largeur des offres pour éviter le chevauchement */
+    box-sizing: border-box; /* Permet de gérer le padding sans causer de débordement */
+}
+
+.offer h3 {
+    color: #a3f7bf;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.offer p { 
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.1;
+    text-align: center;
+    color: #eaeaea;
+}
+
 
 @media (max-width: 768px) {
     .offers {

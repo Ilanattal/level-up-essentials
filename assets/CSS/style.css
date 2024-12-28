@@ -259,7 +259,6 @@ footer {
 }
 
 .offer p { 
-    padding: 20px;
     font-size: 18px;
     line-height: 1.1;
     text-align: center;
@@ -332,7 +331,7 @@ header.navbar {
     align-items: center;
     background-color: #29a19c;
     height: 75px;
-    padding: 0 15px;
+    padding: 0 0px;
 }
 
 .logo {
@@ -342,14 +341,19 @@ header.navbar {
 
 nav {
     display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
+    justify-content: space-evenly; /* Répartit uniformément les éléments */
+    align-items: center; /* Centre verticalement */
+    flex-grow: 1; /* Permet à l'élément nav de prendre toute la largeur disponible */
+    width: 100%; /* Assure que nav prend toute la largeur de son parent */
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-size: 14px;
+    margin: 0 15px; /* Ajoute un espacement fixe entre les liens */
+    text-align: center; /* Centre le texte dans chaque lien */
+    display: block; /* Garantit que les liens prennent toute la largeur disponible pour aligner le texte */
 }
 
 nav a:hover {
@@ -501,7 +505,9 @@ nav a:hover {
     color: #ffffff;
     margin-bottom: 40px;
 }
-
+.level-up-essentials p {
+    padding: 20px;
+}
 .kitchens {
     display: grid;
     grid-template-columns: 1fr;
