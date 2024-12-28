@@ -5,6 +5,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
+/* Navbar */
 header.navbar {
     display: flex;
     flex-direction: row;
@@ -265,38 +266,40 @@ body {
 }
 
 /* Navbar */
+/* Navbar */
 header.navbar {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: #29a19c;
-    height: 75px;
-    padding: 0 0px;
+    margin-top: 0px;
 }
 
 .logo {
-    width: 80px;
+    width: 120px;
     height: auto;
+    margin-right: 0px; /* Garde le logo à gauche */
 }
 
 nav {
     display: flex;
-    justify-content: space-evenly; /* Répartit uniformément les éléments */
-    align-items: center; /* Centre verticalement */
-    flex-grow: 1; /* Permet à l'élément nav de prendre toute la largeur disponible */
+    justify-content: space-between;
+    flex-grow: 1; /* Prend tout l'espace disponible pour les liens */
+    /* margin-left: 20px; Ajoute un peu d'espace entre le logo et les liens */
+    /* margin-right: 100px; */
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 14px;
-    margin: 0 15px; /* Ajoute un espacement fixe entre les liens */
-    text-align: center; /* Centre le texte dans chaque lien */
-    display: block; /* Garantit que les liens prennent toute la largeur disponible pour aligner le texte */
+    font-size: 16px;
+    margin: 0 20px; /* Ajoute de l'espace entre chaque lien */
+  
 }
 
 nav a:hover {
-    color: #a3f7bf;
+    color: #a3f7bf; /* Ajoute un effet de survol pour plus d'interactivité */
 }
 
 /* Banniere */
@@ -537,4 +540,23 @@ footer {
     .offers {
         grid-template-columns: 1fr; /* Une colonne sur les petits écrans */
     }
+}
+
+@media (max-width: 523px) {
+    header.navbar {
+        display: flex;
+        justify-content: space-between; /* Pour répartir les éléments */
+        align-items: center;
+        background-color: #29a19c;
+        padding: 15px 0px;
+    }
+    
+    .logo {
+        width: 120px;
+        height: auto;
+        margin-right: 0px; /* Garde le logo à gauche */
+        margin-left: auto; /* Pousse le logo vers le centre */
+        margin-right: auto; /* Pousse le logo vers le centre */
+    }
+
 }
