@@ -15,10 +15,9 @@
 /* Global Styles */
 body {
     margin: 0px;
-    font-family: Arial, sans-serif;
     background-color: #eaeaea;
     background-color: #27323a;
-    font-family: 'Poppins', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
     line-height: 1.6;
 }
 
@@ -354,10 +353,9 @@ footer p{
 }
 body {
     margin: 0px;
-    font-family: Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
     background-color: #eaeaea;
     background-color: #27323a;
-    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
 }
 
@@ -379,7 +377,7 @@ header.navbar {
 nav {
     display: flex;
     justify-content: space-between;
-    flex-grow: 1; /* Prend tout l'espace disponible pour les liens */
+    flex-grow: 1; 
     /* margin-left: 20px; Ajoute un peu d'espace entre le logo et les liens */
     /* margin-right: 100px; */
 }
@@ -639,7 +637,7 @@ footer {
 @media (max-width: 523px) {
     header.navbar {
         display: flex;
-        justify-content: space-between; /* Pour répartir les éléments */
+        justify-content: space-between; 
         align-items: center;
         background-color: #29a19c;
         padding: 15px 0px;
@@ -648,9 +646,28 @@ footer {
     .logo {
         width: 120px;
         height: auto;
-        margin-right: 0px; /* Garde le logo à gauche */
-        margin-left: auto; /* Pousse le logo vers le centre */
-        margin-right: auto; /* Pousse le logo vers le centre */
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-evenly; /* Cela garantit que l'espace est réparti uniformément entre les éléments */
+        flex-grow: 1;
+        width: 100%; /* Assure que nav prend toute la largeur de son parent */
+    }
+    
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 0 20px; /* Ajoute de l'espace entre chaque lien */
+        display: inline-block; /* Permet aux liens de prendre de la place sans se chevaucher */
+        text-align: center; /* Centre le texte des liens */
+    }
+    
+    nav a:hover {
+        color: #a3f7bf; /* Ajoute un effet de survol pour plus d'interactivité */
     }
 
 }

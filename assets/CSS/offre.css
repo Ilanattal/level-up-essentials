@@ -545,7 +545,7 @@ footer {
 @media (max-width: 523px) {
     header.navbar {
         display: flex;
-        justify-content: space-between; /* Pour répartir les éléments */
+        justify-content: space-between; 
         align-items: center;
         background-color: #29a19c;
         padding: 15px 0px;
@@ -554,9 +554,28 @@ footer {
     .logo {
         width: 120px;
         height: auto;
-        margin-right: 0px; /* Garde le logo à gauche */
-        margin-left: auto; /* Pousse le logo vers le centre */
-        margin-right: auto; /* Pousse le logo vers le centre */
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-evenly; /* Cela garantit que l'espace est réparti uniformément entre les éléments */
+        flex-grow: 1;
+        width: 100%; /* Assure que nav prend toute la largeur de son parent */
+    }
+    
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 0 20px; /* Ajoute de l'espace entre chaque lien */
+        display: inline-block; /* Permet aux liens de prendre de la place sans se chevaucher */
+        text-align: center; /* Centre le texte des liens */
+    }
+    
+    nav a:hover {
+        color: #a3f7bf; /* Ajoute un effet de survol pour plus d'interactivité */
     }
 
 }
